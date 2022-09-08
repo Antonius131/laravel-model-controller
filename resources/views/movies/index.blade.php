@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
 @section('main-content')
- <h2>Content goes here</h2>
+   <ul>
+      @foreach ($movies as $movie)
+         <li>{{ $movie->title }} - {{ $movie->nationality }} - {{ $movie->date }} - {{ $movie->vote }}</li>      
+      @endforeach
+   </ul>
 @endsection
